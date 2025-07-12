@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate of Achievement</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .certificate-container {
+      position: relative;
+      width: 800px;
+      height: 380px;
+      background-color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      border: 8px solid #333;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .certificate-content {
+      position: relative;
+      height: 100%;
+      border: 2px solid #eee;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .certificate-title {
+      font-size: 50px;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      letter-spacing: 5px;
+      color: #000;
+    }
+
+    .certificate-subtitle {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+      color: #000;
+    }
+
+    .recipient-name {
+      font-size: 40px;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      color: #000;
+    }
+
+    .recipient-details {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    /* Remove description completely */
+
+    .seal {
+      position: absolute;
+      left: 120px;
+      top: 320px;
+      width: 60px;
+      height: 60px;
+      background-color: #ffc107;
+      border-radius: 50%;
+      border: 3px solid #ff9800;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #603600;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    .seal:before {
+      content: "";
+      position: absolute;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px dashed #ff9800;
+    }
+
+    .signature-section {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      padding: 0 50px;
+    }
+
+    .signature-line {
+      width: 150px;
+      border-top: 1px solid black;
+      margin-top: 5px;
+    }
+
+    .signature-title {
+      margin-top: 5px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .certificate-id {
+      position: relative;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 8px;
+      color: #999;
+    }
+
+    .platform-name {
+      display: none;
+    }
+
+    .course-title {
+      font-size: 40px;
+      font-weight: bold;
+      margin: 10px 0;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="certificate-container">
+    <div class="certificate-content">
+      <div class="platform-name">SkillHub</div>
+      <div class="seal">AWARD</div>
+      <h1 class="certificate-title">Certificate</h1>
+      <h2 class="certificate-subtitle">Of Achievement</h2>
+
+      <p class="recipient-details">THIS CERTIFICATE IS PRESENTED TO</p>
+      <h3 class="recipient-name">{{studentName}}</h3>
+
+      <p class="recipient-details">For successfully completing the course</p>
+      <p class="course-title">{{courseTitle}}</p>
+
+      <!-- Removed description paragraph completely -->
+
+      <div class="signature-section">
+        <div>
+          <p>{{issueDate}}</p>
+          <div class="signature-line"></div>
+          <div class="signature-title">DATE</div>
+        </div>
+
+        <div>
+          <p>{{instructorName}}</p>
+          <div class="signature-line"></div>
+          <div class="signature-title">SIGNATURE</div>
+        </div>
+      </div>
+
+      <div class="certificate-id">Certificate ID: {{certificateId}}</div>
+    </div>
+  </div>
+</body>
+</html>

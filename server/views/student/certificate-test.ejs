@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    .certificate-options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .option-group {
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .option-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+
+  <div class="container">
+    <h1>Certificate Test Page</h1>
+
+    <div class="certificate-options">
+      <div class="option-group">
+        <div class="option-title">HTML-Based Certificate</div>
+        <p>Generate a certificate using HTML template and convert to PDF</p>
+        <a href="/student/certificate/test-html" class="btn">Download Test HTML Certificate</a>
+      </div>
+
+      <div class="option-group">
+        <div class="option-title">PNG-Based Certificate</div>
+        <p>Generate a certificate using Canvas to create a PNG image and convert to PDF</p>
+        <a href="/student/certificate/test-png" class="btn">Download Test PNG Certificate</a>
+      </div>
+    </div>
+
+    <p>Note: These are test certificates and are not stored in the database.</p>
+
+    <div style="margin-top: 30px;">
+      <a href="/student/certificate/comparison" style="color: #4CAF50; text-decoration: underline;">View Certificate Generation Comparison</a>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+</body>
+</html>

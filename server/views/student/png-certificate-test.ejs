@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PNG Certificate Test</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+  
+  <div class="container">
+    <h1>PNG Certificate Test</h1>
+    <p>Click the button below to generate and download a test certificate.</p>
+    <a href="/student/certificate/test-png" class="btn">Download Test Certificate</a>
+    <p>This certificate is generated using Canvas to create a PNG image and then converted to PDF.</p>
+  </div>
+  
+  <%- include('../partials/footer') %>
+</body>
+</html>

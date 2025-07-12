@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Certificate Direct Download</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #0a2e5c;
+    }
+    .button {
+      display: inline-block;
+      background-color: #0a2e5c;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 50px;
+      margin: 20px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .button:hover {
+      background-color: #0d3d7a;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Certificate Direct Download</h1>
+    <p>Click the button below to download your certificate:</p>
+    <a href="/direct-pdf" class="button">Download Certificate</a>
+    
+    <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
+    
+    <h2>Alternative Methods</h2>
+    <p>If the button above doesn't work, try one of these alternatives:</p>
+    
+    <div style="margin: 20px 0;">
+      <a href="/direct-pdf/view" class="button" style="background-color: #2c974b;">View Certificate</a>
+    </div>
+    
+    <div style="margin: 20px 0;">
+      <a href="/direct-pdf/test" class="button" style="background-color: #e67e22;">Test Page</a>
+    </div>
+  </div>
+  
+  <script>
+    // Auto-download after 1 second
+    setTimeout(function() {
+      window.location.href = '/direct-pdf';
+    }, 1000);
+  </script>
+</body>
+</html>

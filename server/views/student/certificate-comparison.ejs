@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Comparison</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    h1, h2 {
+      color: #333;
+      text-align: center;
+    }
+    
+    .comparison {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    
+    .certificate-option {
+      width: 45%;
+      min-width: 300px;
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    .option-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+      text-align: center;
+    }
+    
+    .pros-cons {
+      margin-top: 20px;
+    }
+    
+    .pros, .cons {
+      margin-bottom: 15px;
+    }
+    
+    .pros h3, .cons h3 {
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    
+    .pros ul {
+      color: #4CAF50;
+    }
+    
+    .cons ul {
+      color: #f44336;
+    }
+    
+    .pros li, .cons li {
+      margin-bottom: 5px;
+      color: #333;
+    }
+    
+    .pros h3:before {
+      content: "✓ ";
+      color: #4CAF50;
+    }
+    
+    .cons h3:before {
+      content: "✗ ";
+      color: #f44336;
+    }
+    
+    .btn {
+      display: block;
+      width: 200px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    
+    .btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+  
+  <div class="container">
+    <h1>Certificate Generation Comparison</h1>
+    <p style="text-align: center;">Compare the two different methods of generating certificates</p>
+    
+    <div class="comparison">
+      <div class="certificate-option">
+        <div class="option-title">HTML-Based Certificate</div>
+        <p>This method uses an HTML template that is converted to PDF.</p>
+        
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>Advantages</h3>
+            <ul>
+              <li>Easier to style using CSS</li>
+              <li>More flexible layout options</li>
+              <li>Can use web fonts and HTML elements</li>
+              <li>Easier to make responsive</li>
+            </ul>
+          </div>
+          
+          <div class="cons">
+            <h3>Disadvantages</h3>
+            <ul>
+              <li>May have inconsistent rendering across devices</li>
+              <li>Can have overflow issues with text</li>
+              <li>PDF conversion may not be pixel-perfect</li>
+              <li>More complex to debug layout issues</li>
+            </ul>
+          </div>
+        </div>
+        
+        <a href="/student/certificate/test-html" class="btn">Download Example</a>
+      </div>
+      
+      <div class="certificate-option">
+        <div class="option-title">PNG-Based Certificate</div>
+        <p>This method uses Canvas to create a PNG image that is converted to PDF.</p>
+        
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>Advantages</h3>
+            <ul>
+              <li>Pixel-perfect control over layout</li>
+              <li>Consistent rendering across all devices</li>
+              <li>No text overflow issues</li>
+              <li>Better for complex designs with graphics</li>
+            </ul>
+          </div>
+          
+          <div class="cons">
+            <h3>Disadvantages</h3>
+            <ul>
+              <li>More code required for styling</li>
+              <li>Less flexible for responsive designs</li>
+              <li>Font loading can be more complex</li>
+              <li>May require more manual positioning</li>
+            </ul>
+          </div>
+        </div>
+        
+        <a href="/student/certificate/test-png" class="btn">Download Example</a>
+      </div>
+    </div>
+    
+    <h2>Recommendation</h2>
+    <p style="text-align: center;">For certificates with fixed dimensions and precise layout requirements, the <strong>PNG-based approach</strong> is recommended as it provides more consistent results across all devices and prevents text overflow issues.</p>
+  </div>
+  
+  <%- include('../partials/footer') %>
+</body>
+</html>
