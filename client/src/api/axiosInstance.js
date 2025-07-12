@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: PROCESS.env.VITE_API_URL,
+  baseURL: "https://skillhub-2.onrender.com",
 });
 
 
